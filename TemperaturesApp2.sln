@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemperaturesApp2", "TemperaturesApp2\TemperaturesApp2.csproj", "{40B6DE84-1F7A-4B59-BFE1-843E01FDDC8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperaturesApp2.Tests", "TemperaturesApp2.Tests\TemperaturesApp2.Tests.csproj", "{B157AA39-FC52-4797-B6B8-5AA5712542FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40B6DE84-1F7A-4B59-BFE1-843E01FDDC8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40B6DE84-1F7A-4B59-BFE1-843E01FDDC8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40B6DE84-1F7A-4B59-BFE1-843E01FDDC8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40B6DE84-1F7A-4B59-BFE1-843E01FDDC8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B157AA39-FC52-4797-B6B8-5AA5712542FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B157AA39-FC52-4797-B6B8-5AA5712542FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B157AA39-FC52-4797-B6B8-5AA5712542FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B157AA39-FC52-4797-B6B8-5AA5712542FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {64066CD5-A25F-4468-B935-E9A207583AF1}
+	EndGlobalSection
+EndGlobal
