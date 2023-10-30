@@ -14,6 +14,7 @@ namespace TemperaturesApp2.Tests
             var statistics = temperatures.GetStatistics();
             Assert.AreEqual(10, statistics.Average);
         }
+        [Test]
         public void TestAverageTemperatureForDay()
         {
             var temperatures = new TemperatureInMemory();
@@ -22,6 +23,7 @@ namespace TemperaturesApp2.Tests
             var statistics = temperatures.GetStatistics("dzisiaj");
             Assert.AreEqual(15, statistics.Average);
         }
+        [Test]
         public void TestMaxTemperature()
         {
             var temperatures = new TemperatureInMemory();
@@ -31,6 +33,7 @@ namespace TemperaturesApp2.Tests
             var statistics = temperatures.GetStatistics();
             Assert.AreEqual(25, statistics.Max);
         }
+        [Test]
         public void TestMaxTemperatureForDay()
         {
             var temperatures = new TemperatureInMemory();
@@ -40,6 +43,7 @@ namespace TemperaturesApp2.Tests
             var statistics = temperatures.GetStatistics("dzisiaj");
             Assert.AreEqual(30, statistics.Max);
         }
+        [Test]
         public void TestMinTemperature()
         {
             var temperatures = new TemperatureInMemory();
@@ -47,9 +51,11 @@ namespace TemperaturesApp2.Tests
             temperatures.AddTemperature("wczoraj", 6, -10);
             temperatures.AddTemperature("dzisiaj", 10, 10);
             temperatures.AddTemperature("dzisiaj", 15, 25);
-            var statistics = temperatures.GetStatistics();
-            Assert.AreEqual(-15, statistics.Max);
+            var statistics = temperatures.GetStatistics(
+                );
+            Assert.AreEqual(-15, statistics.Min);
         }
+        [Test]
         public void TestMinTemperatureForDay()
         {
             var temperatures = new TemperatureInMemory();
@@ -58,7 +64,7 @@ namespace TemperaturesApp2.Tests
             temperatures.AddTemperature("dzisiaj", 10, 10);
             temperatures.AddTemperature("dzisiaj", 15, 25);
             var statistics = temperatures.GetStatistics("wczoraj");
-            Assert.AreEqual(-25, statistics.Max);
+            Assert.AreEqual(-25, statistics.Min);
         }
     }
 }

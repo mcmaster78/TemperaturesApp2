@@ -8,6 +8,16 @@ namespace TemperaturesApp2
         private const string fileName = "temperatutures.txt";
         public override void AddTemperature(string date, int hour, float temperature)
         {
+            if (hour < 0 || hour > 23)
+            {
+                throw new Exception("f Wprowadzono nieprawidłową godzinę, dopuszczalne: 0-23.");
+            }
+
+            if (temperature < -273.4f)
+            {
+                throw new Exception("f Nie istnieje temperatura poniżej -273.4stC");
+            }
+
             var temperatureItem = new TemperatureItem(date, hour, temperature);
             using (var writer = File.AppendText(fileName))
             {

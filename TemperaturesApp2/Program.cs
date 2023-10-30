@@ -66,18 +66,14 @@ while (true)
         dateParam = GetParameter(input, 0);
         if (int.TryParse(GetParameter(input, 1), out hourParam) && float.TryParse(GetParameter(input, 2), out temperatureParam))
         {
-            if (hourParam < 0 || hourParam > 23)
+            try
             {
-                Console.WriteLine("Wprowadzono nieprawidłową godzinę, dopuszczalne: 0-23.");
-                continue;
+                temperatures.AddTemperature(dateParam, hourParam, temperatureParam);
             }
-
-            if (temperatureParam < -273.4f)
+            catch (Exception e)
             {
-                Console.WriteLine("Nie istnieje temperatura poniżej -273.4stC");
-                continue;
-            }
-            temperatures.AddTemperature(dateParam, hourParam, temperatureParam);
+                Console.WriteLine(e.Message);
+            }          
         }
         else
         {
